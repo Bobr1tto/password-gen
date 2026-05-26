@@ -3,14 +3,12 @@ import string
 
 
 def generate_password(length, use_symbols=False):
-    if length < 4:
-        raise ValueError("Длина пароля должна быть не менее 4 символов")
+    if length < 4 or length > 128:
+        raise ValueError("Длина пароля должна быть от 4 до 128 символов")
     chars = string.ascii_letters + string.digits
     if use_symbols:
         chars += string.punctuation
-    password = ""
-    for i in range(length):
-        password += random.choice(chars)
+    password = "".join(random.choice(chars) for _ in range(length))
     return password
 
 
