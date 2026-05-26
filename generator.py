@@ -12,5 +12,5 @@ def generate_password(length, use_symbols=False):
     return password
 
 
-print(generate_password(12))
-print(generate_password(12, use_symbols=True))
+print(generate_password(8))
+print(generate_password(8, use_symbols=True))
