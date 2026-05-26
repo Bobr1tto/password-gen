@@ -3,6 +3,8 @@ import string
 
 
 def generate_password(length, use_symbols=False):
+    if length < 4:
+        raise ValueError("Длина пароля должна быть не менее 4 символов")
     chars = string.ascii_letters + string.digits
     if use_symbols:
         chars += string.punctuation
