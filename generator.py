@@ -12,5 +12,10 @@ def generate_password(length, use_symbols=False):
     return password
 
 
+<<<<<<< HEAD
 print(generate_password(16))
 print(generate_password(16, use_symbols=True))
+=======
+print(generate_password(8))
+print(generate_password(8, use_symbols=True))
+>>>>>>> b606e7523d5fb80d0e868ee4426c550bd58346b9
